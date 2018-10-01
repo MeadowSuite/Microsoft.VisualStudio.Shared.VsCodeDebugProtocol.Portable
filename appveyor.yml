@@ -1,0 +1,5 @@
+version: 1.0.{build}
+build_script:
+- cmd: nuget pack Microsoft.VisualStudio.Shared.VsCodeDebugProtocol.Portable.nuspec -Properties version=%APPVEYOR_BUILD_NUMBER%
+artifacts:
+- path: '**/Microsoft.VisualStudio.Shared.VsCodeDebugProtocol.Portable.*.nupkg'
