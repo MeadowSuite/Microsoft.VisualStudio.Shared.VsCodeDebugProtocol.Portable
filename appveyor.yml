@@ -1,11 +1,11 @@
 version: 1.0.{build}
 build_script:
-- cmd: nuget pack Microsoft.VisualStudio.Shared.VsCodeDebugProtocol.Portable.nuspec -Properties version=%APPVEYOR_BUILD_NUMBER%
+- cmd: nuget pack Portable.Microsoft.VisualStudio.Shared.VsCodeDebugProtocol.nuspec -Properties version=%APPVEYOR_BUILD_NUMBER%
 artifacts:
-- path: '**/Microsoft.VisualStudio.Shared.VsCodeDebugProtocol.Portable.*.nupkg'
-  name: Microsoft.VisualStudio.Shared.VsCodeDebugProtocol.Portable.nupkg
+- path: '**/Portable.Microsoft.VisualStudio.Shared.VsCodeDebugProtocol.*.nupkg'
+  name: Portable.Microsoft.VisualStudio.Shared.VsCodeDebugProtocol.nupkg
 deploy:
 - provider: NuGet
   api_key:
     secure: hX+xhksIt71D0ynw1SNVba92geWTDEUiPuurX/AZ5Yy7u/TCI3CocSyxHhUlfi/o
-  artifact: Microsoft.VisualStudio.Shared.VsCodeDebugProtocol.Portable.nupkg
+  artifact: Portable.Microsoft.VisualStudio.Shared.VsCodeDebugProtocol.nupkg
